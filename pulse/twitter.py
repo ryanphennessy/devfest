@@ -23,7 +23,9 @@ def search(hashtag, city, radius):
 	lat = result['geometry']['location']['lat']
 	lng = result['geometry']['location']['lng']
 	geocode = str(lat) + ',' + str(lng) + ',' + str(radius) + 'mi'
-	print('geocode for ' + city + ' is ' + geocode)
 	results = t.search(q=hashtag, geocode=geocode, lang='en', result_type='recent', count=10)
-	tweets = results['statuses']
-	return tweets
+	statuses = results['statuses']
+	tweets = []
+	for status in statuses:
+		tweets.append(status['text'])
+	return list(set(tweets))
