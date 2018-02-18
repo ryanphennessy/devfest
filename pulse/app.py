@@ -10,7 +10,9 @@ app.config['DEBUG'] = True # Remove this
 def main_page():
 	if request.method == 'POST':
 		hashtag = '#' + request.form['user_search']
-		tweets = search(hashtag)
+		city = request.form['city']
+		radius = request.form['radius']
+		tweets = search(hashtag, city, radius)
 		tweets_text = []
 		for tweet in tweets:
 			tweets_text.append(tweet['text'])
