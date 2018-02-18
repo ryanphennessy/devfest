@@ -1,0 +1,6 @@
+{% extends "search.html" %}
+{% block results %}
+{% for tweet in tweets %}
+	<p>{{ tweet }}</p>
+{% endfor %}
+{% endblock %}
