@@ -1,5 +1,7 @@
 {% extends "search.html" %}
 {% block results %}
+	<h2>{{ city }} {{ sentiment }} {{ topic }}</h2>
+	<h3>Here's what people are saying:</h3>
 {% for tweet in tweets %}
 	<p>{{ tweet }}</p>
 {% endfor %}
