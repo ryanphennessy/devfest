@@ -11,17 +11,14 @@ app.config['DEBUG'] = True # Remove this
 def main_page():
 	if request.method == 'POST':
 		hashtag = '#' + request.form['user_search']
-		city = request.form['city']
+		city = request.form['city'].title()
 		radius = request.form['radius']
 		tweets = search(hashtag, city, radius)
 		if len(tweets) == 0:
 			return render_template('no_results.html', city=city, topic=request.form['user_search'])
-		tweets_text = []
 		sentiments = []
 		for tweet in tweets:
-			print('Working on tweet ' + tweet['text'])
-			tweets_text.append(tweet['text'])
-			sentiments.append(analyze(tweet['text']))
+			sentiments.append(analyze(tweet))
 		total_score = 0
 		total_magnitude = 0
 		for score, magnitude in sentiments:
@@ -29,9 +26,8 @@ def main_page():
 			total_magnitude += magnitude
 		avg_score = total_score / len(sentiments)
 		avg_magnitude = total_magnitude / len(sentiments)
-		print('score ' + str(avg_score))
 		sentiment = overall_sentiment(avg_score, avg_magnitude)
-		return render_template('results.html', city=city, sentiment=sentiment, topic=request.form['user_search'], tweets=tweets_text)
+		return render_template('results.html', city=city, sentiment=sentiment, topic=request.form['user_search'], tweets=tweets)
 	else:
 		return render_template('search.html')
 

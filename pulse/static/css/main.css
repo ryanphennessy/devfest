@@ -1,0 +1,102 @@
+body {
+    background: #F7F7F7;
+}
+
+h1 {
+    width: 100%;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    align-content: center;
+    text-align: center;
+    font: 250% Helvetica, sans-serif;
+}
+
+input[type="text"] {
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 10px;
+}
+
+.form-style{
+    font: 115% Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+    text-align: center;
+    align-content: center;
+}
+
+.form-style input[type="text"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style textarea,
+.form-style select 
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #555;
+    font: 95% Helvetica, sans-serif;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style textarea:focus,
+.form-style select:focus
+{
+    box-shadow: 0 0 0px #43D1AF;
+    border: 2px solid #43D1AF;
+}
+
+.form-style input[type="submit"],
+.form-style input[type="button"]{
+    background: #43D1AF;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+    text-align: center;
+    align-content: center;
+}
+
+h2 {
+    margin-left: 5%;
+    font: 115% Helvetica, sans-serif;
+}
+
+h3 {
+    margin-left: 5%;
+    font: 115% Helvetica, sans-serif;
+}
+
+p {
+    border: 1px solid black;
+    padding: 2%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font: 100% Helvetica, sans-serif;
+}

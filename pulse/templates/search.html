@@ -2,15 +2,16 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Search</title>
+		<title>Pulse</title>
+		<link href="static/css/main.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<h1>Search</h1>
-		<form action="/" method="post">
-			<input type="text" placeholder="hashtag" name="user_search" required/><br>
-			<input type="text" placeholder="city" name="city" required/><br>
-			<input type="text" placeholder="radius in miles" name="radius" required/><br>
-			<button type="submit">Search</button>
+		<h1>Pulse Search</h1>
+		<form class="form-style" action="/" method="post">
+			<input class="form-style" type="text" placeholder="search term" name="user_search" required/><br>
+			<input class="form-style" type="text" placeholder="city" name="city" required/><br>
+			<input class="form-style" type="text" placeholder="radius in miles" name="radius" required/><br>
+			<button class="form-style" type="submit">Search</button>
 		</form>
 		{% block results %}{% endblock %}
 	</body>
